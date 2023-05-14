@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: SearchandCollect
+  m_EditorClassIdentifier: 
+  brickName: Assets/AiScripts/BehaviorTrees-pt1/SearchandCollect.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"993614e49e4e4a5478ed82f00213aaff\" nextId=\"32\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <SelectorNode id=\"21\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <SelectorNode
+    id=\"21\">\r\n      <children>\r\n        <elem>\r\n          <DecoratorGuard
+    id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n          <DecoratorGuard
+    id=\"23\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SelectorNode>\r\n    <DecoratorGuard
+    id=\"26\">\r\n      <guard>\r\n        <ConditionEvalNode id=\"27\" />\r\n     
+    </guard>\r\n      <child>\r\n        <ActionNode id=\"28\" />\r\n      </child>\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </DecoratorGuard>\r\n   
+    <DecoratorGuard id=\"23\">\r\n      <guard>\r\n        <ConditionEvalNode id=\"24\"
+    />\r\n      </guard>\r\n      <child>\r\n        <ActionNode id=\"25\" />\r\n     
+    </child>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </DecoratorGuard>\r\n    <ConditionEvalNode id=\"27\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
+    name=\"CustomConditions/HasSeen\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"28\"
+    action=\"CustomActions/Collect\">\r\n      <inputParams />\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"24\"
+    policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"CustomConditions/IsWandering\">\r\n     
+    <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </ConditionEvalNode>\r\n   
+    <ActionNode id=\"25\" action=\"CustomActions/Wander\">\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n 
+    </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"SearchandCollect\"
+    _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
+    <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <SelectorNode id=\"21\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <DecoratorGuard id=\"23\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ConditionEvalNode id=\"24\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"25\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <DecoratorGuard id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ConditionEvalNode id=\"27\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"28\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <RepeatDecorator id=\"1\" />\r\n          <DecoratorGuard
+    id=\"23\" />\r\n          <ActionNode id=\"28\" />\r\n          <SelectorNode
+    id=\"21\" />\r\n          <DecoratorGuard id=\"26\" />\r\n          <ConditionEvalNode
+    id=\"27\" />\r\n          <ConditionEvalNode id=\"24\" />\r\n          <ActionNode
+    id=\"25\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
+    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"200.9902 75.77792\" name=\"Repeat\" description=\"Repeats
+    the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n       
+    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SelectorNode id=\"21\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"188.6779
+    219.9167\" name=\"Selector\" description=\"Executes all its children until one
+    of them is successful\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <SelectorNode id=\"21\" />\r\n          <RepeatDecorator
+    id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SelectorNode>\r\n   
+    <DecoratorGuard id=\"26\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"57.66669 335.6667\" name=\"Guard\" description=\"Guard\"
+    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <DecoratorGuard id=\"26\" />\r\n          <SelectorNode id=\"21\" />\r\n       
+    </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n    <DecoratorGuard id=\"23\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"191.6667
+    341.6666\" name=\"Guard\" description=\"Guard\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <DecoratorGuard id=\"23\" />\r\n         
+    <SelectorNode id=\"21\" />\r\n        </data>\r\n      </_data>\r\n    </DecoratorGuard>\r\n   
+    <ConditionEvalNode id=\"27\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"57.66669 335.6667\" name=\"CustomConditions/HasSeen\"
+    description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ConditionEvalNode id=\"27\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"28\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"57.66669 335.6667\" name=\"CustomActions/Collect\"
+    description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"28\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"24\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"191.6667 341.6666\" name=\"CustomConditions/IsWandering\"
+    description=\"Eval\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ConditionEvalNode id=\"24\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode id=\"25\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"191.6667 341.6666\" name=\"CustomActions/Wander\"
+    description=\"\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <ActionNode id=\"25\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 1
+  subslist: []
+  _guid: 993614e49e4e4a5478ed82f00213aaff
